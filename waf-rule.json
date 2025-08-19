@@ -1,0 +1,26 @@
+{
+    "Name": "BlockSQLInjection",
+    "Priority": 1,
+    "Action": {
+      "Block": {}
+    },
+    "Statement": {
+      "SqliMatchStatement": {
+        "FieldToMatch": {
+          "UriPath": {}
+        },
+        "TextTransformations": [
+          {
+            "Priority": 0,
+            "Type": "URL_DECODE"
+          }
+        ]
+      }
+    },
+    "VisibilityConfig": {
+      "SampledRequestsEnabled": true,
+      "CloudWatchMetricsEnabled": true,
+      "MetricName": "BlockSQLInjection"
+    }
+  }
+  
